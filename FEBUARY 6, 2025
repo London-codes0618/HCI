@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>First Page</title>
+</head>
+<body>
+    <h1>1st Page</h1>
+    <button><a href = 'second.html'target = 'Second Page'>Go to Second Page</a></button>
+    <button><a href = 'third.html' target = 'Third Page'>Go to Third Page</a></button>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Second Page</title>
+</head>
+<body>
+    <h1>2nd Page</h1>
+    <button><a href = 'first.html' target = 'First Page'>Go to First Page</a></button>
+    <button><a href = 'third.html' target = 'Third Page'>Go to Third Page</a></button>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Third Page</title>
+</head>
+<body>
+    <h1>3rd Page</h1>
+    <button><a href = 'first.html' target = 'First Page'>Go to First Page</a></button>
+    <button><a href = 'second.html' target = 'Second Page'>Go to Second Page</a></button>
+</body>
+</html>
+
+
+button {
+    height: auto;
+    width: 150px;
+    color: rgb(0, 0, 0);
+    margin-right: 20px;
+}
