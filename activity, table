@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .header{
+                text-align: center;
+                border-radius: 1px;
+                border: 1px solid black;
+                align-items: center;
+                background-color: yellow;
+                width: 100%;
+
+            }
+            th {
+                border: 1px solid black;
+                align-items: center;
+                background-color: aqua;
+            }
+            td{
+                text-align: 50%;
+                border: 1px solid black;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th class = "header" colspan="6">STUDENT MARK SHEET</th>
+            </tr>
+            <tr>
+                <th>NAME</th><th>MATH</th><th>SCIENCE</th><th>ENGLISH</th><th>PHYSICS</th><th>GENERAL KNOWLEDGE</th>
+            </tr>
+            <tr>
+                <td>Peter Pan</td>
+                <td style = "text-align: center;">  85</td>
+                <td style = "text-align: center;"> 87</td>
+                <td style = "text-align: center;"> 88</td>
+                <td style = "text-align: center;"> 92</td>
+                <td style = "text-align: center;"> 88</td>
+            </tr>
+            <tr>
+                <td>Pedro Penduko</td>
+                <td style = "text-align: center;"> 91</td>
+                <td style = "text-align: center;"> 81</td>
+                <td style = "text-align: center;"> 78</td>
+                <td style = "text-align: center;"> 71</td>
+                <td style = "text-align: center;"> 74</td>
+            </tr>
+            <tr>
+                <td>Cardo Bitangcol</td>
+                <td style = "text-align: center;"> 81</td>
+                <td style = "text-align: center;"> 86</td>
+                <td style = "text-align: center;"> 88</td>
+                <td style = "text-align: center;"> 84</td>
+                <td style = "text-align: center;"> 92</td>
+            </tr>
+            <tr>
+                <td>Tony Nose</td>
+                <td style = "text-align: center;"> 84</td>
+                <td style = "text-align: center;"> 86</td>
+                <td style = "text-align: center;"> 87</td>
+                <td style = "text-align: center;"> 82</td>
+                <td style = "text-align: center;"> 82</td>
+            </tr>
+            <tr>
+                <td>Petra Pepita</td>
+                <td style = "text-align: center;"> 71</td>
+                <td style = "text-align: center;"> 79</td>
+                <td style = "text-align: center;"> 82</td>
+                <td style = "text-align: center;"> 88</td>
+                <td style = "text-align: center;"> 89</td>
+            </tr>
+        </table>
+    </body>
+</html>
