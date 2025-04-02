@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Style</title>
+</head>
+<body>
+    <h2 id="styledText">Watch my color change!</h2>
+    <button onclick="changeStyle()">Change Color</button>
+
+    <script>
+        function changeStyle() {
+            document.getElementById("styledText").style.color = "red";
+        }
+    </script>
+</body>
+</html>
