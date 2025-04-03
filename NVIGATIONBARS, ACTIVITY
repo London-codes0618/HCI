@@ -1,0 +1,264 @@
+FOR THE MANUAL CLICK OF TRAFFIC LIGHT SIR
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #080216;
+            padding: 10px;
+            width: max-content;
+        }
+        .navbar a, .dropdown > a {
+            color: #f1f0fc;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: left;
+            display: block;
+        }
+        .navbar a:hover, .dropdown:hover > a {
+            background-color: #200ccf;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #4a1ec4;
+            flex-direction: column;
+            min-width: 160px;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content a {
+            padding: 12px 16px;
+            color: #f1f0fc;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #1e0853;
+        }
+        .dropdown:hover .dropdown-content {
+            display: flex;
+        }
+        .container {
+            display: none;
+            margin-left: 20px;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#home" onclick="showContent('home')">HOME</a>
+        <div class="dropdown">
+            <a>ACTIVITIES</a>
+            <div class="dropdown-content">
+                <a href="#lights" onclick="showContent('lights')">LIGHTS</a>
+                <a href="#traffic-lights" onclick="showContent('traffic-lights')">TRAFFIC LIGHTS</a>
+            </div>
+        </div>
+        <a href="#articles" onclick="showContent('articles')">ARTICLES</a>
+        <a href="#inspiration" onclick="showContent('inspiration')">INSPIRATION</a>
+    </div>
+
+    <div id="lights" class="container">
+        <div style="display: flex; flex-direction: column; align-items: center;"></div>
+        <script>
+            function light(sw) {
+                var pic = sw === 1 ? "lightbulboff.jfif" : "lightbulbon.jfif";
+                document.getElementById("bulb").src = pic;
+            }
+        </script>
+        <h2>IKAW ANG ILAW NG TAHANAN</h2>
+        <img id="bulb" src="lightbulbon.jfif" alt="Light Bulb" style="width:100px;height:180px;">
+        <p>
+            <button onclick="light(1)">Turn Off</button>
+            <button onclick="light(0)">Turn On</button>
+        </p>
+    </div>
+
+    <div id="traffic-lights" class="container" style="text-align: center;">
+        <h2>PINDOT AT PILI KA JAN</h2>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div id="traffic-light-container" style="width: 50px; height: 150px; display: flex; flex-direction: column; justify-content: space-around; align-items: center; padding: 10px; border-radius: 10px;">
+                <div id="red-light" style="background-color: grey; width: 30px; height: 30px; border-radius: 50%;"></div>
+                <div id="yellow-light" style="background-color: grey; width: 30px; height: 30px; border-radius: 50%;"></div>
+                <div id="green-light" style="background-color: grey; width: 30px; height: 30px; border-radius: 50%;"></div>
+            </div>
+            <div style="margin-top: 20px;">
+                <button onclick="changeLight('red')">Top Button</button>
+                <button onclick="changeLight('yellow')">Mid Button</button>
+                <button onclick="changeLight('green')">Bottom Button</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(id) {
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(container => container.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        function changeLight(color) {
+            document.getElementById("red-light").style.backgroundColor = color === "red" ? "red" : "grey";
+            document.getElementById("yellow-light").style.backgroundColor = color === "yellow" ? "yellow" : "grey";
+            document.getElementById("green-light").style.backgroundColor = color === "green" ? "green" : "grey";
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+FOR THE AUTOMATIC CHANGE OF TRAFFIC LIGHT SIR
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #080216;
+            padding: 10px;
+            width: max-content;
+        }
+        .navbar a, .dropdown > a {
+            color: #f1f0fc;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: left;
+            display: block;
+        }
+        .navbar a:hover, .dropdown:hover > a {
+            background-color: #200ccf;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #4a1ec4;
+            flex-direction: column;
+            min-width: 160px;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content a {
+            padding: 12px 16px;
+            color: #f1f0fc;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #1e0853;
+        }
+        .dropdown:hover .dropdown-content {
+            display: flex;
+        }
+        .container {
+            display: none;
+            margin-left: 20px;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#home" onclick="showContent('home')">HOME</a>
+        <div class="dropdown">
+            <a>ACTIVITIES</a>
+            <div class="dropdown-content">
+                <a href="#lights" onclick="showContent('lights')">LIGHTS</a>
+                <a href="#traffic-lights" onclick="showContent('traffic-lights')">TRAFFIC LIGHTS</a>
+            </div>
+        </div>
+        <a href="#articles" onclick="showContent('articles')">ARTICLES</a>
+        <a href="#inspiration" onclick="showContent('inspiration')">INSPIRATION</a>
+    </div>
+
+    <div id="lights" class="container">
+        <div style="display: flex; flex-direction: column; align-items: center;"></div>
+        <script>
+            function light(sw) {
+                var pic = sw === 1 ? "lightbulboff.jfif" : "lightbulbon.jfif";
+                document.getElementById("bulb").src = pic;
+            }
+        </script>
+        <h2>IKAW ANG ILAW NG TAHANAN</h2>
+        <img id="bulb" src="lightbulbon.jfif" alt="Light Bulb" style="width:100px;height:180px;">
+        <p>
+            <button onclick="light(1)">Turn Off</button>
+            <button onclick="light(0)">Turn On</button>
+        </p>
+    </div>
+
+    <div id="traffic-lights" class="container" style="text-align: center;">
+        <h2>AUTOMATIC YARN</h2>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div id="traffic-light-container" style="width: 50px; height: 150px; display: flex; flex-direction: column; justify-content: space-around; align-items: center; padding: 10px; border-radius: 10px;">
+                <div id="red-light" style="background-color: grey; width: 30px; height: 30px; border-radius: 50%;"></div>
+                <div id="yellow-light" style="background-color: grey; width: 30px; height: 30px; border-radius: 50%;"></div>
+                <div id="green-light" style="background-color: grey; width: 30px; height: 30px; border-radius: 50%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(id) {
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(container => container.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        function changeLight(color) {
+            document.getElementById("red-light").style.backgroundColor = color === "red" ? "red" : "grey";
+            document.getElementById("yellow-light").style.backgroundColor = color === "yellow" ? "yellow" : "grey";
+            document.getElementById("green-light").style.backgroundColor = color === "green" ? "green" : "grey";
+        }
+
+        function cycleLights() {
+            let colors = ["red", "yellow", "green"];
+            let currentIndex = 0;
+            setInterval(() => {
+                changeLight(colors[currentIndex]);
+                currentIndex = (currentIndex + 1) % colors.length;
+            }, 9000);
+        }
+
+        window.onload = function() {
+            cycleLights();
+        }
+    </script>
+
+</body>
+</html>
